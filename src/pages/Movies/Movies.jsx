@@ -25,7 +25,7 @@ const Movies = () => {
       return;
     }
     movieByQuery(query, page).then(r => {
-      setMovies(r.results);
+      setMovies(prevMovie => [...prevMovie, ...r.results]);
       setTotalResults(r.total_results);
     });
   }, [query, page]);

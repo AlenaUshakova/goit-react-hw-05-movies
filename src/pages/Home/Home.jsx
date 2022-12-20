@@ -13,7 +13,7 @@ const Home = () => {
 
   useEffect(() => {
     popularMovies(page).then(r => {
-      setMovies(r.results);
+      setMovies(prevMovie => [...prevMovie, ...r.results]);
       setTotalResults(r.total_results);
       
     });
