@@ -5,7 +5,7 @@ const KEY = 'd9a5502e7ecfc2f8fab8d65f4cbb6057';
 
 export const popularMovies = async (page) => {
   const response = await axios.get(
-    `trending/all/day?api_key=${KEY}&page=${page}`
+    `trending/movie/day?api_key=${KEY}&page=${page}`
   );
 
   return response.data;
