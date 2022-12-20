@@ -17,6 +17,7 @@ const Movies = () => {
 
   const formSubmit = inputQuery => {
     setPage(1);
+    setMovies([]);
     setSearchParams(inputQuery !== '' ? { query: inputQuery } : {});
   };
 
