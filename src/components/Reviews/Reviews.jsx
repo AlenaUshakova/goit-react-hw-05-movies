@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { ReviewsList, ReviewsAuthor } from './Reviews.styled';
 
- const Reviews = () => {
+const Reviews = () => {
   const { id } = useParams();
 
   const [reviews, setReviews] = useState(null);
@@ -16,7 +16,6 @@ import { ReviewsList, ReviewsAuthor } from './Reviews.styled';
   if (reviews === null) {
     return;
   }
-  console.log(reviews);
 
   return (
     <div>

@@ -66,10 +66,14 @@ const MovieDetails = () => {
         <MovieInfoTitle>Additional Information</MovieInfoTitle>
         <MovieList>
           <li>
-            <MovieLink to="cast">Cast</MovieLink>{' '}
+            <MovieLink to="cast" state={location.state}>
+              Cast
+            </MovieLink>{' '}
           </li>
           <li>
-            <MovieLink to="reviews">Reviews</MovieLink>
+            <MovieLink to="reviews" state={location.state}>
+              Reviews
+            </MovieLink>
           </li>
         </MovieList>
       </MovieInfo>

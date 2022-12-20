@@ -1,5 +1,6 @@
 import { MovieList } from './FilmList.styled';
 import { Link, useLocation } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const BASE_URL = 'https://image.tmdb.org/t/p/w500';
 
@@ -16,4 +17,12 @@ export const FilmList = ({ movies }) => {
       ))}
     </MovieList>
   );
+};
+
+FilmList.propTypes = {
+  images: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    })
+  ),
 };
